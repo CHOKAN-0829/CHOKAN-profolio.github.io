@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CHOKAN profolio</title>
+	<title>AZUKI PROFILE</title>
 	<link rel="stylesheet" href="normalize.css">
 	<!-- google fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,16 @@
 	<!-- CSS ハンバーガーメニューのアニメーション-->
 	<link rel="stylesheet" href="hamburgers.min.css">
 	<link rel="stylesheet" href="btt.css">
+
+	<!-- 写真ポップアップ -->
+	<link rel="stylesheet" href="lightbox.min.css">
+
+	<!-- CSS スライダー用CSS-->
+	<link rel="stylesheet" href="slick.css">
+	<link rel="stylesheet" href="slick-theme.css">
+	<link rel="stylesheet" href="slick-custom.css">
+
+
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -29,13 +39,16 @@
 			<div class="site">
 				<a href="index.html">
 					<p>
-						CHOAKN&nbsp;PROFILE
+						AZUKI&nbsp;PROFILE
 					</p>
 				</a>
 			</div><!-- .site -->
 
 			<button class="nav-btn mail">
-				<i class="fa-solid fa-envelope" style="color: #f3dc86;"></i>
+				<a href="form.html">
+					<i class="fa-solid fa-envelope">
+					</i>
+				</a>
 				<span class="sr-only">mail</span>
 			</button>
 
@@ -49,25 +62,40 @@
 				<span class="sr-only">instagram</span>
 			</button>
 
-			<button class="nav-btn hamburger hamburger--spin"
-				onClick="document.querySelector('html').classList.toggle('open');document.querySelector('.nav-btn').classList.toggle('is-active')">
-				<!-- <i class="fa-solid fa-bars"></i>
-				<i class="batu">✕</i> -->
-				<span class="hamburger-container">
-					<span class="hamburger-inner"></span>
-					<span class="sr-only">Menu</span>
-				</span>
-
+			<button class="nav-btn hamburger hamburger--arrow" id="menu-toggle">
+				<i class="fa-solid fa-bars" id="menu-icon-bars"></i>
+				<i class="batu" id="menu-icon-close">✕</i>
+				<span class="sr-only">Menu</span>
 			</button>
 
 			<nav class="nav">
 				<ul>
 					<li><a href="index.html">ホーム</a></li>
+					<li><a href="#jikosyoukai" class="nav-link">自己紹介</a></li>
+					<li><a href="#sakuhinnsyu" class="nav-link">作品集</a></li>
+					<li><a href="form.html" class="nav-link">お問い合わせ</a></li>
+				</ul>
+			</nav>
+
+			<!-- <button class="nav-btn hamburger hamburger--arrow"
+				onClick="document.querySelector('html').classList.toggle('open');document.querySelector('.hamburger').classList.toggle('is-active')"> -->
+			<!-- <i class="fa-solid fa-bars"></i>
+				<i class="batu">✕</i> -->
+			<!-- <span class="hamburger-container">
+					<span class="hamburger-inner"></span>
+				</span>
+				<span class="sr-only">Menu</span>
+
+			</button>
+
+			<nav class="nav">
+				<ul>
+					<li><a class="drawer__nav__link" href="index.html">ホーム</a></li>
 					<li><a href="#jikosyoukai">自己紹介</a></li>
 					<li><a href="#sakuhinnsyu">作品集</a></li>
 					<li><a href="#">お問い合わせ</a></li>
 				</ul>
-			</nav>
+			</nav> -->
 
 		</div><!-- .header-container -->
 	</header>
@@ -77,196 +105,283 @@
 		***************************/ -->
 
 	<!-- /**************************
-	メイン画像ここから
+	キービジュアル領域ここから
 	***************************/-->
+	<div class="slide-container">
+		<div class="slide-item">
+			<div><img src="slideimage/keyvi1.jpg" alt=""></div>
+			<div><img src="slideimage/keyvi2.jpg" alt=""></div>
+			<div><img src="slideimage/keyvi3.jpg" alt=""></div>
+			<div><img src="slideimage/keyvi4.jpg" alt=""></div>
+			<div><img src="slideimage/keyvi5.jpg" alt=""></div>
+		</div>
 
-	<section class="hero">
-		<img src="img1.png" alt="メイン画像">
-		メイン画像
 
-	</section>
+	</div> <!-- slide-container -->
+
 
 	<!-- /**************************
-	メイン画像　ここまで
+	キービジュアル領域ここまで
 	***************************/
 	
 	/**************************
 	画像とテキスト（自己紹介とスキル）ここから
 	***************************/ -->
 
-	<section class="imageText">
-		<div id="jikosyoukai">
-			<div class="imageText-container common-container">
+	<section class="imageText" id="jikosyoukai">
 
-				<div class="text">
-					<h2 class="headingDeco">自己紹介</h2>
-					<p>Profile</p>
-					<p>ProfileProfileProfileProfile</p>
-				</div><!-- .text -->
+		<div class="imageText-container common-container">
 
-				<figure class="image">
-					<img src="imageText1.jpg" alt="" width="1600" height="1260">
-				</figure>
-			</div><!-- jikosyoukai -->
+			<!-- 。 &#12290;
+						、 &#12289; -->
+
+			<div class="text">
+
+				<div><i class="fa-solid fa-circle-user"></i></div>
+
+				<h2 class="headingDeco">自己紹介</h2>
+				<p><span class="seikaku">明るい</span>とよく言われています</p>
+				<span class="textH2">経歴</span>
+				<p>
+					販売職を5年&#12289;事務職を2年を経験しました&#12290;<br>
+					さらなるスキルアップのために&#12289;教育訓練校にてWebデザインスキルを勉強していました&#12290;<br>学びを楽しみながら、自分自身をさらに高めていけるよう努めます&#12290;
+				</p>
+				<span class="textH2">趣味</span>
+				<p>
+					海を眺めたり&#12289;おいしいご飯を丁寧に味わうことが好きです&#12290;
+				</p>
+			</div><!-- .text -->
+
+
+			<figure class="image mine">
+				<img src="imageText1.jpg" alt="" width="1600" height="1260">
 
 		</div><!-- .imageText-container -->
 
+	</section>
 
-		<section class="imageText">
+	<section class="imageText">
 
-			<div class="imaageText-container common-container reverse">
+		<div class="imageText-container common-container reverse">
 
-				<div class="text">
-					<h2 class="headingDeco">スキル</h2>
-					<p>Skill</p>
-					<p>SkillSkillSkillSkillSkill</p>
-				</div><!-- .text -->
+			<div class="text">
 
-				<figure class="image">
-					<img src="imageText2.jpg" alt="" width="1600" height="1260">
-				</figure>
+				<i class="fa-solid fa-book"></i>
+				<h2 class="headingDeco">習得スキル</h2>
 
-			</div><!-- .imageText-container -->
-		</section><!-- imageText -->
+				<table>
+					<tr>
+						<td>訓練期間</td>
+						<td>2024年10月&sim;2025年2月</td>
+					</tr>
+					<tr>
+						<td>資格</td>
+						<td>Webクリエイター&nbsp;エキスパート</td>
+					</tr>
+					<tr>
+						<td>HTML</td>
+						<td rowspan="2">
+							勉強時間&#0058;222時間<br>
+							現行言語の習得とWebサイト制作<br>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</td>
+					</tr>
+					<tr>
+						<td>CSS3</td>
 
-		<!-- /**************************
+					<tr>
+						<td>JavaScript</td>
+						<td>
+							勉強時間&#0058;19時間
+							<br>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</td>
+					</tr>
+
+					</tr>
+					<tr>
+						<td>illustrator</td>
+						<td rowspan="2">
+							勉強時間&#0058;62時間<br>
+							画像処理とコンテンツ制作技術<br>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</td>
+					</tr>
+					<tr>
+						<td>Photoshop</td>
+					</tr>
+				</table>
+			</div><!-- .text -->
+
+			<figure class="image mine">
+				<img src="imageText2.jpg" alt="" width="1600" height="1260">
+			</figure>
+
+		</div><!-- .imageText-container -->
+	</section><!-- imageText -->
+
+	<!-- /**************************
 画像とテキスト（自己紹介とスキル）ここまで
 ***************************/  -->
-		<!-- /**************************
+	<!-- /**************************
 記事（作品集）ここから
 ***************************/  -->
 
-		<section class="posts">
-			<div id="sakuhinnsyu"></div>
-			<div class="common-container">
+	<section class="posts" id="sakuhinnsyu">
+		<div class="common-container">
 
+			<div class="anthology">
 				<h2 class="heading">
-					Anthology<span>作品集</span>
+					作品集
+					<span>WORKS</span>
 				</h2>
+			</div>
 
-				<div class="posts-container">
+			<div class="posts-container">
 
-					<article class="post">
-						<a href="#">
-							<figure class="image">
-								<img src="banner2.jpg" alt="" width="1000" height="750">
-							</figure>
-							<h3>スキル</h3>
-							<p>Skill</p>
-							<p>SkillSkillSkillSkillSkill</p>
-						</a>
-					</article>
+				<article class="post">
+					<h3>バナー１</h3>
+					<p>制作時期&#0058;2024年12月</p>
+					<p>使用スキル&#0058;Photoshop&#12289;illustrator</p>
+					<a href="banner1.jpg" data-lightbox="sakuhinn" data-title="作品集&nbsp;バナー１">
 
-					<article class="post">
-						<a href="#">
-							<figure class="image">
-								<img src="banner2.jpg" alt="" width="1000" height="750">
-							</figure>
-							<h3>スキル</h3>
-							<p>Skill</p>
-							<p>SkillSkillSkillSkillSkill</p>
-						</a>
-					</article>
+						<figure class="image">
+							<img src="banner1.jpg" alt="" width="1000" height="750">
+						</figure>
 
-					<article class="post">
-						<a href="#">
-							<figure class="image">
-								<img src="catchcopy1.jpg" alt="" width="1000" height="750">
-							</figure>
-							<h3>スキル</h3>
-							<p>Skill</p>
-							<p>SkillSkillSkillSkillSkill</p>
-						</a>
-					</article>
+					</a>
+				</article>
 
-					<article class="post">
-						<a href="#">
-							<figure class="image">
-								<img src="catchcopy2.jpg" alt="" width="1000" height="750">
-							</figure>
-							<h3>スキル</h3>
-							<p>Skill</p>
-							<p>SkillSkillSkillSkillSkill</p>
-						</a>
-					</article>
+				<article class="post">
+					<h3>バナー２</h3>
+					<p>制作時期&#0058;2024年12月</p>
+					<p>使用スキル&#0058;Photoshop&#12289;illustrator</p>
+					<a href="banner2.jpg" data-lightbox="sakuhinn" data-title="作品集&nbsp;バナー２">
+						<figure class="image">
+							<img src="banner2.jpg" alt="" width="1000" height="750">
+						</figure>
+					</a>
+				</article>
 
-					<article class="post">
-						<a href="#">
-							<figure class="image">
-								<img src="banner1.jpg" alt="" width="1000" height="750">
-							</figure>
-							<h3>個人制作-Premium&nbsp;Bath</h3>
-							<p>Skill</p>
-							<p>SkillSkillSkillSkillSkill</p>
-						</a>
-					</article>
-					<article class="post">
-						<a href="#">
-							<figure class="image">
-								<img src="banner2.jpg" alt="" width="1000" height="750">
-							</figure>
-							<h3>団体制作-くすのき</h3>
-							<p>Skill</p>
-							<p>SkillSkillSkillSkillSkill</p>
-						</a>
-					</article>
+				<article class="post">
 
-				</div><!-- .posts-container -->
-			</div><!-- common-container -->
+					<h3>キャッチフレーズ１</h3>
+					<p>制作時期&#0058;2024年12月</p>
+					<p>使用スキル&#0058;Photoshop&#12289;illustrator</p>
+					<a href="catchcopy1.jpg" data-lightbox="sakuhinn" data-title="作品集&nbsp;キャッチフレーズ１">
+						<figure class="image">
+							<img src="catchcopy1.jpg" alt="" width="1000" height="750">
+						</figure>
+					</a>
+				</article>
 
-		</section>
+				<article class="post">
+					<h3>キャッチフレーズ２</h3>
+					<p>制作時期&#0058;2024年12月</p>
+					<p>使用スキル&#0058;Photoshop&#12289;illustrator</p>
+					<a href="catchcopy2.jpg" data-lightbox="sakuhinn" data-title="作品集&nbsp;キャッチフレーズ２">
+						<figure class="image">
+							<img src="catchcopy2.jpg" alt="" width="1000" height="750">
+						</figure>
+					</a>
+				</article>
+
+				<article class="post mySite">
+					<h3>個人制作サイト</h3>
+					<span class="siteName">Premium&nbsp;Bath</span><small>&nbsp;&nbsp;&lpar;架空サイト&rpar;</small>
+					<p>制作時期&#0058;2025年1月</p>
+					<p>使用スキル&#0058;HTML&#12289;CSS&#12289;Photoshop&#12289;illustrator</p>
+
+					<a href="個人サイト/index.html" target="_blank">
+						<img src="title.jpg" alt="個人制作サイト" width="1000" height="500">
+					</a>
+					<p><small>別サイトに移動します</small></p>
+				</article>
+
+				<article class="post mySite">
+					<h3>団体制作サイト </h3>
+					<span class="siteName">くすのき</span><small>&nbsp;&nbsp;&lpar;架空サイト&rpar;</small>
+					<p>制作時期&#0058;2025年1月</p>
+					<p>使用スキル&#0058;HTML&#12289;CSS&#12289;JavaScript</p>
+
+					<a href="mu_wan_ju/site/index.html" target="_blank">
+						<img src="index-top.png" alt="団体制作サイト" width="1000" height="500">
+					</a>
+					<p><small>別サイトに移動します</small></p>
+				</article>
+
+			</div><!-- .posts-container -->
+		</div><!-- common-container -->
+
+	</section>
 
 
-		<!-- /**************************
+	<!-- /**************************
 記事（作品集）ここからここまで
 ***************************/  -->
 
 
-		<!-- /**************************
+	<!-- /**************************
 footerここからここから
 ***************************/  -->
-		<footer class="footer">
+	<footer class="footer">
 
-			<div class="footer-container common-container">
+		<div class="footer-container common-container">
 
-				<div class="footer-site">
-					<a href="index.html">
-						CHOKAN PROFILE
-					</a>
-				</div><!-- .footer-site-->
+			<div class="footer-site">
+				<a href="index.html">
+					AZUKI PROFILE
+				</a>
+			</div><!-- .footer-site-->
 
-				<ul class="footer-menu">
-					<li><a href="#">会社概要</a></li>
-					<li><a href="#">利用規約</a></li>
-					<li><a href="#">特定商取引法</a></li>
-					<li><a href="#">個人情報の取り扱い</a></li>
-					<li><a href="#">お問い合わせ</a></li>
-				</ul><!-- /.footer-menu -->
+			<ul class="footer-menu">
+				<li><a href="TermsOfUse.html">利用規約</a></li>
+				<li><a href="privacy.html">個人情報の取り扱い</a></li>
+				<li><a href="form.html">お問い合わせ</a></li>
+			</ul><!-- /.footer-menu -->
 
-				<div class="footer-copy">
-					&copy;2025 CHOKAN PROFILE.
-				</div><!-- .footer-copy -->
+			<div class="footer-copy">
+				&copy;2025 AZUKI PROFILE.
+			</div><!-- .footer-copy -->
 
-			</div><!-- .footer-container -->
-		</footer>
+		</div><!-- .footer-container -->
+	</footer>
 
-		<!-- /**************************
+	<!-- /**************************
 footerここまで
 ***************************/  -->
 
 
-		<!-- /**************************
-上へ戻るボタン　本体
+	<!-- /**************************
+上へ戻るボタン 本体
 ***************************/ -->
-		<div id="btt"><a href="#">▲</a></div>
+	<div id="btt"><a href="#">▲</a></div>
 
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="js/btt.js"></script>
-		<script src="js/menu.js"></script>
-		<!-- ハンバーガーメニュー用JQuery -->
-		<script src="js/menu.js"></script>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/btt.js"></script>
 
+	<!-- ハンバーガーメニュー用JQuery -->
+	<script src="js/menu.js"></script>
+
+	<!-- 写真ポップアップ -->
+	<script src="js/lightbox.min.js"></script>
+
+	<!-- slick本体JQuery -->
+	<script src="js/slick.min.js"></script>
+	<script src="js/slick-custom.js"></script>
 </body>
 
 </html>
