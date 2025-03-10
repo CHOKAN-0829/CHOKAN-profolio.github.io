@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CHOKAN profolio</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Sawarabi+Mincho&display=swap"
+		rel="stylesheet">
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/b8e2b49fd8.js" crossorigin="anonymous"></script>
+	<!-- CSS ハンバーガーメニューのアニメーション-->
+	<link rel="stylesheet" href="css/hamburgers.min.css">
+	<link rel="stylesheet" href="css/btt.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<!-- /**************************
+	ヘッダーここから
+	***************************/ -->
+	<header class="header">
+		<div class="common-container header-container">
+
+			<div class="site">
+				<a href="index.html">
+					<p>
+						CHOAKN&nbsp;PROFILE
+					</p>
+				</a>
+			</div><!-- .site -->
+
+			<button class="nav-btn mail">
+				<i class="fa-solid fa-envelope" style="color: #f3dc86;"></i>
+				<span class="sr-only">mail</span>
+			</button>
+
+			<button class="nav-btn">
+				<i class="fa-brands fa-facebook"></i>
+				<span class="sr-only">facebook</span>
+			</button>
+
+			<button class="nav-btn">
+				<i class="fa-brands fa-instagram"></i>
+				<span class="sr-only">instagram</span>
+			</button>
+
+			<button class="nav-btn hamburger hamburger--spin"
+				onClick="document.querySelector('html').classList.toggle('open');document.querySelector('.nav-btn').classList.toggle('is-active')">
+				<!-- <i class="fa-solid fa-bars"></i>
+				<i class="batu">✕</i> -->
+				<span class="hamburger-container">
+					<span class="hamburger-inner"></span>
+					<span class="sr-only">Menu</span>
+				</span>
+
+			</button>
+
+			<nav class="nav">
+				<ul>
+					<li><a href="index.html">ホーム</a></li>
+					<li><a href="#jikosyoukai">自己紹介</a></li>
+					<li><a href="#sakuhinnsyu">作品集</a></li>
+					<li><a href="#">お問い合わせ</a></li>
+				</ul>
+			</nav>
+
+		</div><!-- .header-container -->
+	</header>
+
+	<!-- /**************************
+		ヘッダーここまで
+		***************************/ -->
+
+	<!-- /**************************
+	メイン画像ここから
+	***************************/-->
+
+	<section class="hero">
+		<img src="images/img1.png" alt="メイン画像">
+		メイン画像
+
+	</section>
+
+	<!-- /**************************
+	メイン画像　ここまで
+	***************************/
+	
+	/**************************
+	画像とテキスト（自己紹介とスキル）ここから
+	***************************/ -->
+
+	<section class="imageText">
+		<div id="jikosyoukai">
+			<div class="imageText-container common-container">
+
+				<div class="text">
+					<h2 class="headingDeco">自己紹介</h2>
+					<p>Profile</p>
+					<p>ProfileProfileProfileProfile</p>
+				</div><!-- .text -->
+
+				<figure class="image">
+					<img src="images/imageText1.jpg" alt="" width="1600" height="1260">
+				</figure>
+			</div><!-- jikosyoukai -->
+
+		</div><!-- .imageText-container -->
+
+
+		<section class="imageText">
+
+			<div class="imaageText-container common-container reverse">
+
+				<div class="text">
+					<h2 class="headingDeco">スキル</h2>
+					<p>Skill</p>
+					<p>SkillSkillSkillSkillSkill</p>
+				</div><!-- .text -->
+
+				<figure class="image">
+					<img src="images/imageText2.jpg" alt="" width="1600" height="1260">
+				</figure>
+
+			</div><!-- .imageText-container -->
+		</section><!-- imageText -->
+
+		<!-- /**************************
+画像とテキスト（自己紹介とスキル）ここまで
+***************************/  -->
+		<!-- /**************************
+記事（作品集）ここから
+***************************/  -->
+
+		<section class="posts">
+			<div id="sakuhinnsyu"></div>
+			<div class="common-container">
+
+				<h2 class="heading">
+					Anthology<span>作品集</span>
+				</h2>
+
+				<div class="posts-container">
+
+					<article class="post">
+						<a href="#">
+							<figure class="image">
+								<img src="images/banner2.jpg" alt="" width="1000" height="750">
+							</figure>
+							<h3>スキル</h3>
+							<p>Skill</p>
+							<p>SkillSkillSkillSkillSkill</p>
+						</a>
+					</article>
+
+					<article class="post">
+						<a href="#">
+							<figure class="image">
+								<img src="images/banner2.jpg" alt="" width="1000" height="750">
+							</figure>
+							<h3>スキル</h3>
+							<p>Skill</p>
+							<p>SkillSkillSkillSkillSkill</p>
+						</a>
+					</article>
+
+					<article class="post">
+						<a href="#">
+							<figure class="image">
+								<img src="images/catchcopy1.jpg" alt="" width="1000" height="750">
+							</figure>
+							<h3>スキル</h3>
+							<p>Skill</p>
+							<p>SkillSkillSkillSkillSkill</p>
+						</a>
+					</article>
+
+					<article class="post">
+						<a href="#">
+							<figure class="image">
+								<img src="images/catchcopy2.jpg" alt="" width="1000" height="750">
+							</figure>
+							<h3>スキル</h3>
+							<p>Skill</p>
+							<p>SkillSkillSkillSkillSkill</p>
+						</a>
+					</article>
+
+					<article class="post">
+						<a href="#">
+							<figure class="image">
+								<img src="images/banner1.jpg" alt="" width="1000" height="750">
+							</figure>
+							<h3>個人制作-Premium&nbsp;Bath</h3>
+							<p>Skill</p>
+							<p>SkillSkillSkillSkillSkill</p>
+						</a>
+					</article>
+					<article class="post">
+						<a href="#">
+							<figure class="image">
+								<img src="images/banner2.jpg" alt="" width="1000" height="750">
+							</figure>
+							<h3>団体制作-くすのき</h3>
+							<p>Skill</p>
+							<p>SkillSkillSkillSkillSkill</p>
+						</a>
+					</article>
+
+				</div><!-- .posts-container -->
+			</div><!-- common-container -->
+
+		</section>
+
+
+		<!-- /**************************
+記事（作品集）ここからここまで
+***************************/  -->
+
+
+		<!-- /**************************
+footerここからここから
+***************************/  -->
+		<footer class="footer">
+
+			<div class="footer-container common-container">
+
+				<div class="footer-site">
+					<a href="index.html">
+						CHOKAN PROFILE
+					</a>
+				</div><!-- .footer-site-->
+
+				<ul class="footer-menu">
+					<li><a href="#">会社概要</a></li>
+					<li><a href="#">利用規約</a></li>
+					<li><a href="#">特定商取引法</a></li>
+					<li><a href="#">個人情報の取り扱い</a></li>
+					<li><a href="#">お問い合わせ</a></li>
+				</ul><!-- /.footer-menu -->
+
+				<div class="footer-copy">
+					&copy;2025 CHOKAN PROFILE.
+				</div><!-- .footer-copy -->
+
+			</div><!-- .footer-container -->
+		</footer>
+
+		<!-- /**************************
+footerここまで
+***************************/  -->
+
+
+		<!-- /**************************
+上へ戻るボタン　本体
+***************************/ -->
+		<div id="btt"><a href="#">▲</a></div>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/btt.js"></script>
+		<script src="js/menu.js"></script>
+		<!-- ハンバーガーメニュー用JQuery -->
+		<script src="js/menu.js"></script>
+
+</body>
+
+</html>
