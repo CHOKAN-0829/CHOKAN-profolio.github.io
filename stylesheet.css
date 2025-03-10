@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+/**************************
+基本
+***************************/
+:root {
+	--v-space: clamp(90ox, 9vw, 120px)
+}
+
+body {
+	background-color: #eee;
+	color: #707070;
+	font-family: "UD デジタル 教科書体 NP-B", "HGP行書体", 'Times New Roman', "Bookman Old Style", serif;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+ul {
+	margin: 0;
+	list-style: none;
+}
+
+p {
+	line-height: 1.8;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	filter: brightness(100%) contrast(130%);
+}
+
+.common-cotainer {
+	width: min(92%, 1166px);
+	margin: auto;
+	position: relative;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/**************************
+ヘッダー
+***************************/
+
+.header {
+	height: 80px;
+	background-color: lightblue;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.header-container {
+	display: flex;
+	margin-right: auto;
+	align-items: center;
+	height: 100%;
+}
+
+.header-container>:first-child {
+	margin-right: auto;
+}
+
+.site {
+	width: 8rem;
+	padding: 1rem;
+	font-size: 1.5rem;
+	line-height: -1;
+}
+
+/* ナビゲーション領域 */
+.nav-btn {
+	padding: 0;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	color: #aaa;
+	font-size: 25px;
+	padding-right: 1rem;
+	width: 40px;
+}
+
+.open .nav-btn {
+	z-index: 110;
+	color: #fff;
+}
+
+.nav-btn .fa-bars {
+	display: revert;
+}
+
+.open .nav-btn .fa-bars {
+	display: none;
+}
+
+.nav-btn .batu {
+	display: none;
+}
+
+.open .nav-btn .batu {
+	display: revert;
+}
+
+
+@media(min-width: 768px) {
+	.nav-btn {
+		display: none;
+	}
+}
+
+/* ナビゲーションメニュー */
+
+@media(max-width:767px) {
+
+	.nav {
+		position: fixed;
+		inset: 0 -100% 0 100%;
+		z-index: 100;
+		background-color: lightblue;
+		transition: 0.3s;
+	}
+
+	.open .nav {
+		transform: translate(-100%, 0x)
+	}
+
+	.nav ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		gap: 40px;
+		color: #fff;
+	}
+}
+
+@media(min-width:768px) {
+	.nav ul {
+		display: flex;
+		gap: 40px;
+		color: #707070;
+	}
+}
+
+.hambuger-inner,
+.hambuger-inner::before,
+.hambuger-inner::after,
+.hamburger.is-active .hambuger-inner,
+.hamburger.is-active .hambuger-inner::before,
+.hamburger.is-active .hambuger-inner::after {
+	background-color: currentColor;
+}
+
+/**************************
+メイン画像
+***************************/
+
+/**************************
+画像とテキスト（自己紹介とスキル）
+***************************/
+
+.imageText {
+	padding: clamp(90px, 9vw, 120px)0;
+	background-color: #eee;
+}
+
+.imageText+.imageText {
+	padding-top: 0;
+}
+
+.imageText-container {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(45px, 6vw, 80px);
+}
+
+@media(min-width: 768px) {
+	.imageText-container {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.imageText-container.reverse {
+		flex-direction: row-reverse;
+	}
+
+	.imageText-container>.text {
+		flex: 1;
+		min-width: 17em;
+	}
+
+	.imageText-container>.iamge {
+		flex: 2;
+	}
+
+	.headingDeco {
+		font-size: clamp(30px, 3vw, 40px);
+		min-height: 0vw;
+		font-weight: normal;
+	}
+
+	.headingDeco::after {
+		display: block;
+		content: "";
+		width: 160px;
+		height: 0px;
+		border-top: solid 2px #a52a2a;
+		margin-top: 0.1em;
+	}
+
+	.headingDeco+p {
+		margin-top: 0.5em;
+		margin-bottom: 0.8em;
+		color: #a52a2a;
+		font-family: ;
+		font-size: 18px;
+	}
+}
+
+/**************************
+記事（作品集）
+***************************/
+
+.posts {
+	padding: var(--v-space)0;
+	background-color: lightblue;
+}
+
+.posts-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 32px 25px;
+}
+
+@media(min-width:768px) {
+	.posts-container {
+		grid-template-columns: (3, 1fr);
+	}
+}
+
+.post a {
+	display: block;
+	text-align: center;
+}
+
+.post h3 {
+	margin: 1em 0 0.5em;
+	font-size: clamp(18px, 2vw, 20px);
+
+}
+
+.post>p {
+	max-width: 20em;
+	font-size: clamp(16px, 1.6vw, 18px);
+	min-height: 0vw;
+}
+
+/* .post img {
+	aspect-ratio: 2/1;
+	object-fit: cover;
+} */
+
+.heading {
+	position: absolute;
+	top: clac((var(--v-space) + 0.6em)* -1);
+	font-family: "Baskerville Old Face", "HGP教科書体", 'Times New Roman', Times, serif;
+	font-weight: 400;
+	font-size: clamp(40px, 5.2vw, 70px);
+	min-height: 0vw;
+	margin-bottom: 2em;
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑文字が真ん中にこない....*/
+
+.heading span {
+	display: block;
+}
+
+/**************************
+Footer
+***************************/
+
+.footer {
+	padding: 20px 0;
+	background-color: #eee;
+	color: #707070;
+	font-size: 13px;
+}
+
+.footer-site {
+	grid-area: site;
+	font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
+}
+
+.footer-menu {
+	grid-area: menu;
+}
+
+.footer-copy {
+	grid-area: copy;
+}
+
+.footer-container {
+	display: grid;
+	grid-template-areas:
+		"site"
+		"menu"
+		"copy";
+	gap: 10px;
+	justify-items: center;
+}
+
+@media(min-width: 768px) {
+
+	.footer-menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 15px;
+	}
+}
+
+/**************************
+上へ戻るボタン
+***************************/
+#btt {
+	text-align: center;
+	position: fixed;
+	right: 1vw;
+	bottom: 1vw;
+}
+
+#btt a {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	text-decoration: none;
+	background-color: #aaa;
+	color: #fff;
+	border-radius: 50%;
+	transition: all 800ms;
+}
