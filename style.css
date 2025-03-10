@@ -308,7 +308,7 @@ tr:first-child th {
 .fa-book {
 	font-size: 1.5rem;
 	float: left;
-	padding: 1rem 0.8rem 0 0.5rem;
+	padding: 0rem 0.8rem 0 0.5rem;
 }
 
 @media(min-width: 768px) {
